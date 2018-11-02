@@ -23,4 +23,9 @@ public class AccountController {
         return "redirect:/account/findAll";
     }
 
+    @RequestMapping("/ex")
+    public void exceptionCather() {
+        int i = 1 / 0;
+    }
+
 }

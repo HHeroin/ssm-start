@@ -21,6 +21,23 @@
     <mvc:resources mapping="/js/" location="/js/**"/>
     <mvc:resources mapping="/image/" location="/images/**"/>
 
+    <!--异常处理器-->
+    <bean class="com.guowii.exception.ExceptionHander" />
+
+    <!--自定义拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--哪些路径拦截-->
+            <mvc:mapping path="/account/*"/>
+
+            <!--哪些路径不拦截-->
+            <!-- <mvc:exclude-mapping path="" />-->
+            <bean class="com.guowii.interceptor.MyInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--开启对Springmvc注解的支持-->
     <mvc:annotation-driven />
+
+
 </beans>

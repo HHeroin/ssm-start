@@ -35,16 +35,6 @@
         <aop:advisor advice-ref="txAdvice" pointcut="execution(public * com.guowii.service.*.*(..))"/>
     </aop:config>
 
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <!--哪些路径拦截-->
-            <mvc:mapping path="/account/*"/>
-
-            <!--哪些路径不拦截-->
-           <!-- <mvc:exclude-mapping path="" />-->
-            <bean class="com.guowii.interceptor.MyInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
 
    <import resource="mybatis.xml" />
 
