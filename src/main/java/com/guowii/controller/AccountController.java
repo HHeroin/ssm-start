@@ -22,4 +22,5 @@ public class AccountController {
         accountService.saveAccount(account);
         return "redirect:/account/findAll";
     }
+
 }
