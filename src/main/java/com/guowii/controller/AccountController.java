@@ -20,6 +20,7 @@ public class AccountController {
     @RequestMapping("/add")
     public String add(Account account) {
         accountService.saveAccount(account);
+
         return "redirect:/account/findAll";
     }
 
